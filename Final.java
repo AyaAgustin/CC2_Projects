@@ -13,16 +13,21 @@ public class Final {
     }
     
     public static void one (BufferedReader br) throws IOException{
-        System.out.println("Enter your choice"
-                + "\n Fibonacci"
-                + "\n Factorial");
+        System.out.println("\nFibonacci"
+                + "\nFactorial"
+                + "\nExit");
         System.out.println("Enter your choice:");
         String choice = br.readLine();
         if (choice.equalsIgnoreCase("Fibonacci")){
             fibonacci(br);
+            one(br);
         }
         else if (choice.equalsIgnoreCase("Factorial")){
             factorial(br);
+            one(br);
+        }
+        else if (choice.equalsIgnoreCase("Exit")){
+            System.exit(0);
         }
         else {
             System.out.println("Invalid Input");
@@ -43,7 +48,7 @@ public class Final {
         System.out.println("");
         System.out.println("Elements");
         for (int i=0;i<arr.length;i++){
-            System.out.print("f ["+i+"] \t");
+            System.out.print("f ["+arr[i]+"] \t");
         }
         System.out.println(" ");
         for (int a =0;a<arr.length;a++){
@@ -76,7 +81,7 @@ public class Final {
         System.out.println("");
         System.out.println("Elements");
         for (int i=0;i<arr.length;i++){
-            System.out.print("f ["+(i+1)+"] \t");
+            System.out.print("f ["+(arr[i])+"] \t");
         }
         System.out.println(" ");
         for (int a =0;a<arr.length;a++){
